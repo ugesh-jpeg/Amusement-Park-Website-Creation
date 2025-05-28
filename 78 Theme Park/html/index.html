@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content = "group 78">
+    <meta name = "keywords" content="Amusement, Park, Amusement Park, group 78">
+    <meta name="description" content="Group 78 Amusement Park">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 78 Amusement Park</title>
+    <link rel="stylesheet" href="Stylesheets/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar & Items -->
+    <section id="header">
+        <div class="headerpicture"> <!-- BackGround Picture -->
+            <div class="container">
+                <nav>
+                    <a href="index.html"><img src="pictures/transparent 78.png" class="logo" alt="theme park logo"></a> <!-- LOGO -->
+                    <ul>
+                        <li><a href="index.html">HOME</a></li> <!-- Navigation Bar Items -->
+                        <li><a href="attractions.html">ATTRACTION</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li>
+                            <a href="#">OPENING HOURS</a>
+                            <div class="popup">
+                                <h2>Opening Hours</h2>
+                                <p><b><i>Monday - Friday</i>: 8:00 AM - 11:00 PM</b></p>
+                                <p><b><i>Saturday - Sunday</i>: 9:00 AM - 12:00 AM</b></p><br>
+                           </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-text"> 
+                <h1>Fun Within Us</h1>
+                <h2><a href="attractions.html#attractions">View Rides Here</a></h2> <!-- Redirect Link to Attractions page-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticketing Page -->
+    <section id="ticketing">
+        <div class="container">
+            <h1 class="title">Get Your Tickets Now!</h1>  <!-- Title -->
+            <div class="ticket-type">
+                <div class="Aticket">  <!-- Adult ticket -->
+                    <h2>Adult:</h2>
+                    <div class="quantity">
+                        <button class="minus" onclick="updateTicketCount('adult', -1)"> - </button> <!-- +1 quantity of ticket -->
+                        <span id="adult-count">0</span>
+                        <button class="plus" onclick="updateTicketCount('adult', 1)"> + </button>  <!-- -1 quantity of ticket -->
+                    </div>
+                </div>
+                <div class="Cticket">  <!-- Child or Senior Ticket-->
+                    <h2>Child/Senior:</h2>
+                    <div class="quantity">
+                        <button class="minus" onclick="updateTicketCount('child', -1)"> - </button> 
+                        <span id="child-count">0</span>
+                        <button class="plus" onclick="updateTicketCount('child', 1)"> + </button>
+                    </div>
+                </div>
+                <div class="Vdate">  <!-- Visiting Date -->
+                    <h2>Date:</h2>
+                    <input type="date">  <!-- Calender -->
+                </div>
+                <div class="code">
+                    <h2>Promo Code:</h2>
+                    <input type="text">  <!-- TextBox -->
+                </div>
+            </div>
+            <div class="submit-button">  <!-- Submit button -->
+                <input type="submit" value="Let's Go!">
+            </div>
+        </div>
+        <script src ="scripts/ticketcount.js"></script>  <!-- JavaScript code to add/minus quantity-->
+    </section>
+     <!-- Programmes Section-->
+    <section id="programmes">
+        <h1 class="title">Programmes</h1>  <!-- Title -->
+        <div class="container">
+            <div class="slideshow-container">  <!-- Slideshow Area -->
+                <div class="mySlides fade">
+                    <img src="pictures/stpat.jpg" alt="programme 1">  <!-- First Picture -->
+                </div>
+                <div class="mySlides fade">
+                    <img src="pictures/stpatsign.jpg" alt="programme 2">  <!-- Second Picture-->
+                </div>
+                <div class="mySlides fade">
+                    <img src="pictures/stpatricks.jpg" alt="programme 3">  <!-- Third Picture -->
+                </div>
+            </div>
+            <div style="text-align:center">  <!-- Mini indication of pages -->
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        </div>
+        <script src="scripts/slideshow.js"></script>  <!-- Javascript Code for Auto function-->
+    </section>
+
+     <!-- Getting here Section -->
+   <section id="Overmap">
+    <div class="container">
+        <h1 class="title">Getting Here</h1>
+        <div class="Gmaps">  <!-- import Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.075835041661!2d114.03870697536686!3d22.31297154243585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403fc2f53d3953d%3A0x35b3af6ce4475405!2sHong%20Kong%20Disneyland!5e0!3m2!1sen!2ssg!4v1717605880306!5m2!1sen!2ssg" 
+            width="500" height="350" style="border:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="address">  <!-- Text on the right -->
+            <h2>Address:</h2>
+            <p>78 Themepark Road,<br> Dreamland 987654</p>
+        </div>
+        <div class="bus">
+            <h2>Buses Available:</h2>
+            <p>26, 65, 188, 742 (EASTBOUND)</p>
+        </div>
+        <div class="train">
+            <h2>Train:</h2>
+            <p>Themepark Station NE32</p>
+        </div>
+    </div>
+   </section>
+
+    <!-- FAQ page -->
+    <section id="FAQ">
+        <div class="container">
+            <h1 class="FAQtitle">FAQs</h1>
+            <div class="faq">
+                <div class ="questionheader">  <!-- Genre of quesiton -->
+                <h3>1. Travel</h3>
+                </div>
+                <div class="question">
+                <h3>How can I get to 78's Theme Park?</h3>
+                <svg width = "15" height="10" viewBox = "0 0 42 25">
+                <path d ="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="answer">  <!-- Answer for each question-->
+                <p>There are various modes of transport to 78's theme park. You can travel by bus, take a car or ride the train.</p>
+                <p>Buses that head towards 78's Theme Park: 26 , 65 , 188 , 742 .</p>
+                <p>Train station: Themepark Station NE32.</p>
+                </div>
+            </div>
+        
+            <div class="faq">
+                <div class="question">
+                <h3>What are the parking charges at 78 Theme Park?</h3>
+                <svg width = "15" height="10" viewBox = "0 0 42 25">
+                <path d ="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg> 
+                </div>
+                <div class="answer">
+                <p>Parking Rates $35 per car or motorcycle and $40 per oversized vehicle for the entirety of the day.</p>
+                </div>
+            </div>
+        
+            <div class ="questionheader">
+                <h3>2. Tour</h3>
+            </div>
+            <div class="faq">
+                <div class="question">
+                <h3>What time does the theme park open?</h3>
+                <svg width = "15" height="10" viewBox = "0 0 42 25">
+                <path d ="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+            <p>78 Theme Park opens on the Weekdays from 8am to 11pm and the Weekends 9am to 12am.</p>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="question">
+                <h3>Will the ThemePark be open during wet weather?</h3>
+                <svg width = "15" height="10" viewBox = "0 0 42 25">
+                <path d ="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Yes the themepark will still be open. However, due to the safety of our guests, some rides will be unavailable.</p>
+            </div>
+        </div>
+        <div class ="questionheader">
+            <h3>3. Further Enquiries</h3>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Have any further questions?</h3>
+                <svg width = "15" height="10" viewBox = "0 0 42 25">
+                <path d ="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Should you have questions that is not coverd in our FAQ, do drop us an email at assistance@78park.com.</p>
+            </div>
+        </div> 
+    </div>
+    </section>
+    <script src ="scripts/app.js"></script>  <!-- JavaScript code for dropdown effect-->
+
+     <!-- Footer Section -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="panel-1">
+                    <div class="row">
+                        <div class="footer-section attraction-info">
+                            <h3>Attractions</h3>
+                            <p>Korzasteer</p>
+                            <p>Midway Wheel</p>
+                            <p>Jack's Ship</p>
+                        </div>
+                        <div class="footer-section resto-info">
+                            <h3>Restaurants</h3>
+                            <p>Western Bar</p>
+                            <p>Mexican Delights</p>
+                            <p>Burger Queen</p>
+                        </div>
+                        <div class="footer-section shop-info">
+                            <h3>Shops</h3>
+                            <p>Photo Booth</p>
+                            <p>Candy Goodness</p>
+                            <p>Lego</p>
+                        </div>
+                        <div class="footer-section vip-info">
+                            <h3>VIP Experience</h3>
+                            <p>Attraction VIP</p>
+                            <p>Dining experience VIP</p>
+                        </div>
+                        <div class="footer-section contact-info">
+                            <h3>Contact Us At</h3>
+                            <p>Email: assistance@78park.com</p>
+                            <p>Phone: (+65)12345678</p>
+                            <p>Counter opening hours:<br>Mon-Sun, 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div class="footer-section travel-info">
+                            <h3>Visitor Information</h3>
+                            <p><a href="attractions.html">Map</a></p>  <!-- Section Item with links to other pages-->
+                            <p><a href="attractions.html#parking">Parking Information</a></p>
+                            <p><a href="index.html">FAQ</a></p>
+                            <p><a href="attractions.html#TOS">Terms of Service</a></p>
+                            <p><a href="attractions.html#Privacy">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-2">
+                    <div class="footer newsletter"><!-- Newsletter Button -->
+                        <h3>Stay Updated!</h3>
+                        <form action="#">
+                            <button type="submit" class="submit-button">
+                                What are you waiting for ?<br>Subscribe here
+                            </button>
+                        </form>
+                    </div>
+                    <div class="footer-section social-media">
+                        <h3>Follow us on</h3>
+                        <a href="https://www.instagram.com"><img src="pictures/instagram-social-media.png" alt="Instagram"></a> <!-- Social Media Pages Redirect Links-->
+                        <a href="https://www.facebook.com"><img src="pictures/facebook-social-media.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com"><img src="pictures/linkedin-app.png" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com"><img src="pictures/youtube-app.png" alt="YouTube"></a>
+                        <a href="https://www.x.com"><img src="pictures/x-social-media.png" alt="x"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trademark">
+            <p>Copyright © 78 Theme Park at Seventy Eight Pte. Ltd.<br>All Rights Reserved.</p> <!-- Business Trademark-->
+        </div>
+    </section>
+</body>
+</html>

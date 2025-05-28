@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content = "group 78">
+    <meta name = "keywords" content="Shop,Promo, Amusement Park, group 78">
+    <meta name="description" content="Group 78 Amusement Park Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 78 Amusement Park</title>
+    <link rel="stylesheet" href="Stylesheets/shop.css">
+</head>
+
+<body>
+    <!-- Header div contains themePark logo and nav bar -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="pictures/transparent 78.png" class="logo" alt="theme park logo"></a>
+                
+                <!-- Navigation bar -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="attractions.html">ATTRACTION</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    
+                    <!-- Opening hours with hover functionality -->
+                    <li>
+                        <a href="#">OPENING HOURS</a>
+                        <div class="popup">
+                            <h2>Opening Hours</h2>
+                            <p><b><i>Monday - Friday</i>: 8:00 AM - 11:00 PM</b></p>
+                            <p><b><i>Saturday - Sunday</i>: 9:00 AM - 12:00 AM</b></p><br>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        
+        <!--- Grid container's 1st column (Current Events' banner) ---> 
+        <section class="left-column">
+            <h2 style = "color: greenyellow">CURRENT EVENTS!</h2><br>
+                <p> Join us for a spectacular celebration as 78 Theme Park marks its 78th month! Enjoy a month full of thrilling adventures, exclusive discounts, special events, and unforgettable experiences. </p>
+                <br>
+                <h2 style = "color: greenyellow"> Special offers till 8 July!</h2><br>
+                    <ul>
+                        <div class="Rides-header">
+                            <li>
+                                <h3 style = "color: greenyellow">RIDES</h3>
+                                <ul class="discounted-stuff">
+                                    <li><b style = "color: red"><i>Buy 2 tickets and get the next at 50% off!!</i></b></li>
+                                    <br>
+                                </ul>
+                                <img src="pictures/promo_ferris.jpeg" alt="Promo Pic">
+                            </li>
+                        </div>
+                    </ul>
+        </section>
+        
+        <!--- Grid container's 2nd column (Restaurant & Shops) --->
+        <main class ="main">
+            
+            <!--HTML Buttons to switch between restaurant & shop slideshow-->
+            <!--Onclick changes the selected slideshow id to be presented-->
+            <div class="tabs">
+                <button class="tablinks" onclick="openTab(event, 'restaurantSlides')" id="defaultOpen">Restaurants</button>
+                <button class="tablinks" onclick="openTab(event, 'shopSlides')">Shops</button>
+            </div>
+            
+            <!--- Grid container's 3rd column (Reward's card banner) ---> 
+            <div class="slideshow-container" id="restaurantSlides">
+                <div class="slideshow">
+                    <h2>All Restaurants</h2>
+                    
+                    <!---- Western Bar restaurant --->
+                    <div class="container mySlides fade">
+                        <b>
+                            <img src="pictures/westernFood.jpg" alt="Western food">
+                            <h3>78's Western Bar</h3>
+                            <p>Serving up authentic American Cuisine with classics such as Texas chicken fried steak and Mac & Cheese</p>
+                            <br>
+                            <p>Price Point: <b style="color: greenyellow;">$$$</b></p>
+                        </b>
+                    </div>
+
+                    <!---- Mexican Delights Restaurant ---->
+                    <div class="container mySlides fade">
+                        <b>
+                            <img src="pictures/mexicanFood.jpg" alt="Mexican food">
+                            <h3>78's Mexican Delights</h3>
+                            <p>Try our famous Jumbo Burrito and other authentic Mexican Cuisine! Order between 3pm - 5pm for a free Taco!</p>
+                            <br>
+                            <p>Price Point: <b style="color: greenyellow;">$$</b></p>
+                        </b>
+                    </div>
+
+                    <!---- Burger Queen Restaurant ---->
+                    <div class="container mySlides fade">
+                        <b>
+                            <img src="pictures/fastFood.jpg" alt="Burger restuarant">
+                            <h3>78's Burger Queen</h3>
+                            <p>Featuring 78 theme park's resident fast food joint! Serving heartwarming burgers at affordable price points!</p>
+                            <br>
+                            <p>Price Point: <b style="color: greenyellow;">$</b></p>
+                        </b>
+                    </div>
+                    
+                    <!--HTML button to go left and right of slideshow -->
+                    <button class="button left" onclick="plusDivs(-1, 'restaurantSlides')">&#10094;</button>
+                    <button class="button right" onclick="plusDivs(1, 'restaurantSlides')">&#10095;</button>
+                    <!--Onclick changes slideshow index via plusDiv function -->
+                </div>
+            </div>
+            
+            <!----- SHOPS Slide Show ----->
+            <div class="slideshow-container" id="shopSlides">
+                <div class="slideshow">
+                    <h2>All Shops</h2>
+                    
+                    <!---- Candy shop ---->
+                    <div class="container mySlides fade">
+                        <b>
+                            <img src="pictures/CandyShop.png" alt="Candy shop">
+                            <h3>78 Candy Goodness</h3>
+                            <p>With a wide range of up to 78 different types of candies to choose from!!</p>
+                            <br>
+                            <p> Spin the wheel and receive up to <b style="color: greenyellow;">50%</b> <b>discount by spending $50 in a single receipt!</b></p>
+                        </b>    
+                    </div>
+
+                    <!---- Brick Kingdom shop---->
+                    <div class="container mySlides fade">
+                        <b>
+                            <img src="pictures/LEGO.jpg" alt="Toy shop">
+                            <h3>Brick Kingdom</h3>
+                            <p>A world of fun and creativity in our Authorized Lego flagship store!!</p>
+                            <br>
+                            <p><b style="color: greenyellow;">10% Off</b> for purchases of $200</p>
+                            <p><b style="color: greenyellow;">20% Off</b> for purchases of $800</p>
+                        </b>
+                    </div>
+                    
+                    <!---- Photobooth shop---->
+                    <div class="container mySlides fade">
+                        <b>
+                            <img src="pictures/PhotoBooth.jpg" alt="Photobooth">
+                            <h3>78 Photo Booth</h3>
+                            <p>Make memories that last a lifetime with Insta-worthy moments right here!!</p>
+                            <br>
+                            <p>First photo <b style="color: greenyellow;">50% Off</b> for Adults with accompanying Children!</p>
+                            <p><b style="color: greenyellow;">30% Off</b> for every purchase of the 5 photo set!</p>
+                        </b>       
+                    </div>
+                    
+                    <!--- HTML button to go left and right of slideshow -->
+                    <button class="button left" onclick="plusDivs(-1, 'shopSlides')">&#10094;</button>
+                    <button class="button right" onclick="plusDivs(1, 'shopSlides')">&#10095;</button>
+                    <!--Onclick changes slideshow index via plusDiv function -->
+                </div>
+            </div>
+        </main>    
+        
+        <!--- Grid container's 3rd column (Reward's card banner) ---> 
+        <section class="right-column">
+            <h2 style = "color: greenyellow">78 Rewards Card Promotion</h2>
+            <br>
+            <img src="pictures/78MemberCard.jpeg" alt="78rewardcard">
+            <br>
+            <p class="cardlink" style = "color: greenyellow"><b>Click here to sign up now!!</b></p>
+            <br>
+            <p> Experience the exciting adventures and rides with our free 78 Rewards card! Unlock a world of excitement and benefits as you journey through your favourite attractions. With every purchase, earn points that can be redeemed for discounts on tickets, VIP passes and exclusive merchandise. Join now to start accumulating your points!</p>
+        </section>
+    </div>
+    
+    <!--- JS code for slideshow and tabs --->
+    <script src = "scripts/app.js"></script>
+
+    <!----- Promotional Picture ----->
+    <section id="promo">
+        <h1>SHOP WITH US NOW!</h1>
+        <h2 style="color: greenyellow;">Sales up to 70% at participating shops till 8th July 2024!</h2>
+        <img src="pictures/discount.jpg" alt="Current Promotions">
+    </section>
+    
+    <!----- Footer ----->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="panel-1">
+                    <div class="row">
+                        <div class="footer-section attraction-info">
+                            <h3>Attractions</h3>
+                            <p>Krazy koaster</p>
+                            <p>Midway Wheel</p>
+                            <p>Jack's Ship</p>
+                        </div>
+                        <div class="footer-section resto-info">
+                            <h3>Restaurants</h3>
+                            <p>Western Bar</p>
+                            <p>Mexican Delights</p>
+                            <p>Burger Queen</p>
+                        </div>
+                        <div class="footer-section shop-info">
+                            <h3>Shops</h3>
+                            <p>Photo Booth</p>
+                            <p>Candy Goodness</p>
+                            <p>Lego</p>
+                        </div>
+                        <div class="footer-section vip-info">
+                            <h3>VIP Experience</h3>
+                            <p>Attraction VIP</p>
+                            <p>Dining experience VIP</p>
+                        </div>
+                        <div class="footer-section contact-info">
+                            <h3>Contact Us At</h3>
+                            <p>Email: assistance@78park.com</p>
+                            <p>Phone: (+65)12345678</p>
+                            <p>Counter opening hours:<br>Mon-Sun, 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div class="footer-section travel-info">
+                            <h3>Visitor Information</h3>
+                            <p><a href="attractions.html">Map</a></p>
+                            <p><a href="attractions.html#parking">Parking Information</a></p>
+                            <p><a href="index.html">FAQ</a></p>
+                            <p><a href="attractions.html#TOS">Terms of Service</a></p>
+                            <p><a href="attractions.html#Privacy">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel-2">
+                    <div class="footer newsletter">
+                        <h3>Stay Updated!</h3>
+                        <form action="#">
+                            <button type="submit" class="submit-button">
+                                What are you waiting for<br>Subscribe here
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="footer-section social-media">
+                        <h3>Follow us on</h3>
+                        <a href="https://www.instagram.com"><img src="pictures/instagram-social-media.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com"><img src="pictures/facebook-social-media.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com"><img src="pictures/linkedin-app.png" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com"><img src="pictures/youtube-app.png" alt="YouTube"></a>
+                        <a href="https://www.x.com"><img src="pictures/x-social-media.png" alt="x"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trademark">
+            <p>Copyright © 78 Theme Park at Seventy Eight Pte. Ltd.<br>All Rights Reserved.</p>
+        </div>
+    </section>
+</body>
+</html>

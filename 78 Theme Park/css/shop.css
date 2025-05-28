@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: aliceblue;
+}
+
+#header{
+    width: 100%;
+    background-color: #051650;
+    font-weight: bold; 
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(80%, -80%);
+    background-color: #fff;
+    padding: 20px;
+    border: 5px solid #000;
+    z-index: 1000;
+    color: #000;
+}
+
+li:hover .popup {
+    display: block;
+}
+
+.container{
+    padding: 0px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 130px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7sec;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.grid-container, .promos{
+    background-size: cover;
+    background-position: center;
+    background-image: url(pictures/ticketbackground.jpg);
+}
+
+/*---- Div Section ----*/
+.grid-container {
+        display: grid;
+        grid-template-columns: auto 4fr auto; 
+}
+
+.left-column, .right-column{
+    width: 350px;
+    background-color: #051650;
+    color: white;
+    text-align: justify; 
+    padding: 10px 20px; 
+    margin: 30px;
+}
+
+.left-column img {
+    max-width: 310px;
+    padding-right: 20px;
+}
+
+.right-column img {
+    max-width: 310px;
+    height: 350px;
+}
+
+.cardlink {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.discounted-stuff, .Rides-header {
+    margin-left: 20px; /* shift list to the right */
+} 
+
+/*----- Category tabs -----*/
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tabs button {
+    background-color: #333;
+    color: white;
+    padding: 20px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.tabs button.active {
+    background-color: orange;
+}
+
+/*------SlideShow-----*/
+.slideshow-container {
+    display: none;
+    position: relative;
+    justify-content: center;
+    margin: 25px auto; 
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-container.active {
+    display: flex;
+}
+
+.slideshow-container h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: greenyellow; 
+}
+
+.slideshow-container h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    color: orange; 
+}
+
+.slideshow-container p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.slideshow {
+    width: 70%; 
+    margin: 20px auto; 
+    position: relative;
+}
+
+#restaurantSlides .slideshow img{
+    width: 100%;
+    height: 300px;
+}
+
+#shopSlides .slideshow img{
+    width: 100%;
+    height: 300px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.button {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(232, 178, 178);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.left { /*---Left slideshow button---*/
+    left: 0;
+}
+
+.right { /*---Right slideshow button---*/
+    right: 0;
+}
+
+.button.left:hover, .button.right:hover {
+    background-color: orange;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*------ Promotion banner section -------*/
+#promo {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url(pictures/ticketbackground.jpg);
+}
+
+#promo h1{
+    color: orange;
+}
+
+#promo img {
+    width: 100%;
+    max-width: 800px;
+    max-height: 500px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+/*------ FOOTER ------*/
+.footer {
+    box-sizing: border-box;
+    background-color: #051650;
+}
+
+.footer .container {
+    width: 100%;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1204px;
+}
+
+.footer .container .row{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footer .container .row .panel-1 .row  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer .container .row .panel-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: -15px;
+}
+.footer .container > div h3{
+    color:yellow;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px; 
+    margin: 10px; 
+}
+
+.footer .social-media img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.footer-section .newsletter input[type="email"] {
+    width: 85%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.footer .newsletter .submit-button {
+    padding: 10px 15px;
+    margin-top: 5px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 0; 
+    white-space: normal; 
+    text-align: center; 
+}
+
+.trademark {
+    font-size: 16px;
+    width: 100%;
+    max-width: 1204px;
+    text-align: center;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a:visited, a:active {
+    color: white;
+}
